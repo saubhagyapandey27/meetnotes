@@ -224,8 +224,6 @@ python src/main.py
 ## 🪟 Windows Installer
 
 > **⚠️ Coming Soon** — The packaged Windows installer (no Python required, ~220MB, zero-config) is being prepared and will be available as a [GitHub Release](https://github.com/Chhayaonly/MeetNotes/releases) soon.
->
-> To build the installer yourself from source, see **[INSTALLER_BUILD_PLAN.md](INSTALLER_BUILD_PLAN.md)**.
 
 ---
 
