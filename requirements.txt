@@ -1,0 +1,25 @@
+# MeetNotes — Python dependencies
+# Install with:  pip install -r requirements.txt
+#
+# NOTE: Two additional components must be obtained manually (not on PyPI):
+#   • llama-server.exe — from https://github.com/ggerganov/llama.cpp/releases
+#     Place in  bin/llama-server.exe  or set LLAMA_SERVER_PATH env variable.
+#   • SmolLM2 fine-tuned GGUF — download from the Hugging Face link in README.
+#     Place in  models/
+
+# ASR: Moonshine Tiny ONNX Runtime wrapper
+moonshine-voice>=0.1.0
+
+# Embedding model loader (potion-mxbai-256d-v2 for semantic chunking)
+model2vec>=0.3.0
+
+# Audio capture (microphone + system loopback)
+soundcard>=0.4.2
+sounddevice>=0.4.6
+soundfile>=0.12.1
+
+# Numerics
+numpy>=1.26.0
+
+# HTTP client for llama-server API communication
+requests>=2.31.0

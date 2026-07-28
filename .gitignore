@@ -1,0 +1,88 @@
+# ─────────────────────────────────────────────────────────────
+# MeetNotes — .gitignore
+# ─────────────────────────────────────────────────────────────
+
+# ── Python ───────────────────────────────────────────────────
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+dist/
+build/
+*.egg
+.eggs/
+*.whl
+
+# ── Virtual environments ──────────────────────────────────────
+venv/
+.venv/
+env/
+.env/
+
+# ── PyInstaller build output ──────────────────────────────────
+dist/
+build/
+*.spec.bak
+
+# ── Model files (large binaries — distributed separately) ────
+# GGUF language model files (download from HuggingFace, see README)
+models/*.gguf
+# Moonshine ONNX Runtime model (run setup.py to populate)
+models/moonshine_tiny_ort/
+# Embedding model (run setup.py to populate)
+models/potion-mxbai-256d-v2/
+
+# Keep the .gitkeep placeholder so the models/ folder is tracked
+!models/.gitkeep
+
+# ── User data (recordings & generated notes) ─────────────────
+recordings/*.wav
+recordings/*.mp3
+notes/*.txt
+notes/*.md
+
+# Keep the .gitkeep placeholders so empty dirs are tracked
+!recordings/.gitkeep
+!notes/.gitkeep
+
+# ── Standalone binaries (bin/ folder) ────────────────────────
+bin/*
+!bin/.gitkeep
+
+# ── Private Build Plans (local reference only) ───────────────
+INSTALLER_BUILD_PLAN.md
+
+
+# ── SQLite database (user session data) ──────────────────────
+*.db
+*.sqlite
+*.sqlite3
+
+# ── Dataset audio (raw AMI/ICSI audio — not redistributable) ─
+Training and Experimentation/AMI Dataset Audios/
+Training and Experimentation/ICSI Dataset Audios/
+
+# ── Training data output backup/temp files (originals kept for reference) ────
+Training and Experimentation/data_prep/output/*.backup
+Training and Experimentation/data_prep/output/*.log
+
+# ── OS / editor artefacts ────────────────────────────────────
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+.idea/
+.vscode/
+*.code-workspace
+
+# ── Conda / pip ──────────────────────────────────────────────
+.conda/
+pip-log.txt
+pip-delete-this-directory.txt
+
+# ── Temporary / scratch ───────────────────────────────────────
+*.tmp
+*.bak
+*.orig
+temp_snapshot.wav
